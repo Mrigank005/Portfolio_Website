@@ -2,28 +2,44 @@ import React, { useState, useEffect } from 'react';
 import { Github, Linkedin, ExternalLink } from 'lucide-react';
 
 const TechStack = ({ stack }) => {
+  const groupedTech = stack.reduce((acc, tech) => {
+    if (!acc[tech.category]) {
+      acc[tech.category] = [];
+    }
+    acc[tech.category].push(tech);
+    return acc;
+  }, {});
+
   return (
     <div>
       <h2 className="text-4xl font-bold mb-8 tracking-tight">Tech Stack</h2>
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-        {stack.map((tech) => (
-          <div 
-            key={tech.name} 
-            className="bg-white/10 p-4 rounded-lg backdrop-blur-sm hover:bg-white/20 transition-all duration-300 group"
-            role="listitem"
-            aria-label={`${tech.name} technology`}
-          >
-            <img
-              src={`/api/placeholder/64/64`}
-              alt={`${tech.name} logo`}
-              className="w-16 h-16 mx-auto mb-2 group-hover:scale-110 transition-transform duration-300"
-            />
-            <p className="text-center text-sm font-medium text-gray-300 group-hover:text-white transition-colors">
-              {tech.name}
-            </p>
+      {Object.entries(groupedTech).map(([category, techs]) => (
+        <div key={category} className="mb-12">
+          <h3 className="text-2xl font-semibold mb-6 text-teal-300">{category}</h3>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {techs.map((tech) => (
+              <div 
+                key={tech.name} 
+                className="bg-white/10 p-4 rounded-lg backdrop-blur-sm hover:bg-white/20 transition-all duration-300 group"
+                role="listitem"
+                aria-label={`${tech.name} technology`}
+              >
+                <div className="bg-white/5 p-3 rounded-lg mb-3">
+                  <img
+                    src={tech.icon}
+                    alt={tech.alt}
+                    className="w-16 h-16 mx-auto object-contain group-hover:scale-110 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                </div>
+                <p className="text-center text-sm font-medium text-gray-300 group-hover:text-white transition-colors">
+                  {tech.name}
+                </p>
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
+        </div>
+      ))}
     </div>
   );
 };
@@ -84,28 +100,91 @@ const Portfolio = () => {
   const [isScrolling, setIsScrolling] = useState(false);
 
   const techStack = [
-    { name: "Python", icon: "/api/placeholder/64/64" },
-    { name: "C++", icon: "/api/placeholder/64/64" },
-    { name: "C", icon: "/api/placeholder/64/64" },
-    { name: "JavaScript", icon: "/api/placeholder/64/64" },
-    { name: "HTML5", icon: "/api/placeholder/64/64" },
-    { name: "CSS3", icon: "/api/placeholder/64/64" },
-    { name: "React", icon: "/api/placeholder/64/64" },
-    { name: "NumPy", icon: "/api/placeholder/64/64" },
-    { name: "Pandas", icon: "/api/placeholder/64/64" }
+    {
+      name: "Python",
+      icon: "/images/tech/python.png",
+      alt: "Python Programming Language Logo",
+      category: "Programming Languages"
+    },
+    {
+      name: "C++",
+      icon: "/images/tech/cpp.png",
+      alt: "C++ Programming Language Logo",
+      category: "Programming Languages"
+    },
+    {
+      name: "C",
+      icon: "/images/tech/c.png",
+      alt: "C Programming Language Logo",
+      category: "Programming Languages"
+    },
+    {
+      name: "JavaScript",
+      icon: "/images/tech/javascript.png",
+      alt: "JavaScript Programming Language Logo",
+      category: "Web Technologies"
+    },
+    {
+      name: "HTML5",
+      icon: "/images/tech/html5.png",
+      alt: "HTML5 Logo",
+      category: "Web Technologies"
+    },
+    {
+      name: "CSS3",
+      icon: "/images/tech/css3.png",
+      alt: "CSS3 Logo",
+      category: "Web Technologies"
+    },
+    {
+      name: "React",
+      icon: "/images/tech/react.png",
+      alt: "React JavaScript Library Logo",
+      category: "Frameworks"
+    },
+    {
+      name: "NumPy",
+      icon: "/images/tech/numpy.png",
+      alt: "NumPy Library Logo",
+      category: "Data Science"
+    },
+    {
+      name: "Pandas",
+      icon: "/images/tech/pandas.png",
+      alt: "Pandas Library Logo",
+      category: "Data Science"
+    },
+    {
+      name: "Git",
+      icon: "/images/tech/git.png",
+      alt: "Git Version Control Logo",
+      category: "Tools"
+    },
+    {
+      name: "GitHub",
+      icon: "/images/tech/github.png",
+      alt: "GitHub Logo",
+      category: "Tools"
+    },
+    {
+      name: "VS Code",
+      icon: "/images/tech/vscode.png",
+      alt: "Visual Studio Code Logo",
+      category: "Tools"
+    }
   ];
 
   const experienceData = [
     {
       title: "Courses",
       description: "Completing courses in Generative AI and AI/ML.",
-      logo: "/api/placeholder/240/80",
+      logo: "/images/exp/udemy-logo.png",
       alt: "Udemy Logo"
     },
     {
       title: "School",
       description: "Education includes top grades in computer science with strong problem-solving skills.",
-      logo: "/api/placeholder/240/80",
+      logo: "/images/exp/upes-logo.png",
       alt: "UPES Logo"
     }
   ];
