@@ -102,73 +102,73 @@ const Portfolio = () => {
   const techStack = [
     {
       name: "Python",
-      icon: "/images/tech/python.png",
+      icon: "/python-logo.png",
       alt: "Python Programming Language Logo",
       category: "Programming Languages"
     },
     {
       name: "C++",
-      icon: "/images/tech/cpp.png",
+      icon: "/cpp-logo.png",
       alt: "C++ Programming Language Logo",
       category: "Programming Languages"
     },
     {
       name: "C",
-      icon: "/images/tech/c.png",
+      icon: "/c-logo.png",
       alt: "C Programming Language Logo",
       category: "Programming Languages"
     },
     {
       name: "JavaScript",
-      icon: "/images/tech/javascript.png",
+      icon: "/javascript-logo.png",
       alt: "JavaScript Programming Language Logo",
       category: "Web Technologies"
     },
     {
       name: "HTML5",
-      icon: "/images/tech/html5.png",
+      icon: "/html5-logo.png",
       alt: "HTML5 Logo",
       category: "Web Technologies"
     },
     {
       name: "CSS3",
-      icon: "/images/tech/css3.png",
+      icon: "/css3-logo.png",
       alt: "CSS3 Logo",
       category: "Web Technologies"
     },
     {
       name: "React",
-      icon: "/images/tech/react.png",
+      icon: "/react-logo.png",
       alt: "React JavaScript Library Logo",
       category: "Frameworks"
     },
     {
       name: "NumPy",
-      icon: "/images/tech/numpy.png",
+      icon: "/numpy-logo.png",
       alt: "NumPy Library Logo",
       category: "Data Science"
     },
     {
       name: "Pandas",
-      icon: "/images/tech/pandas.png",
+      icon: "/pandas-logo.png",
       alt: "Pandas Library Logo",
       category: "Data Science"
     },
     {
       name: "Git",
-      icon: "/images/tech/git.png",
+      icon: "/git-logo.png",
       alt: "Git Version Control Logo",
       category: "Tools"
     },
     {
       name: "GitHub",
-      icon: "/images/tech/github.png",
+      icon: "/github-logo.png",
       alt: "GitHub Logo",
       category: "Tools"
     },
     {
       name: "VS Code",
-      icon: "/images/tech/vscode.png",
+      icon: "/vscode-logo.png",
       alt: "Visual Studio Code Logo",
       category: "Tools"
     }
@@ -178,13 +178,13 @@ const Portfolio = () => {
     {
       title: "Courses",
       description: "Completing courses in Generative AI and AI/ML.",
-      logo: "/images/exp/udemy-logo.png",
+      logo: "/udemy-logo.png",
       alt: "Udemy Logo"
     },
     {
       title: "School",
       description: "Education includes top grades in computer science with strong problem-solving skills.",
-      logo: "/images/exp/upes-logo.png",
+      logo: "/upes-logo.png",
       alt: "UPES Logo"
     }
   ];
