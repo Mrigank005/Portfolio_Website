@@ -277,6 +277,15 @@ const Portfolio = () => {
               And Loves to connect with people who share same passion.
             </p>
           </div>
+          <div className="w-full lg:w-1/2 flex justify-center">
+            <div className="rounded-2xl overflow-hidden border-4 border-teal-400/30 shadow-xl shadow-teal-900/50 transition-transform duration-300 hover:scale-105">
+              <img
+                src="/images/profile.jpg"
+                alt="Mrigank Singh"
+                className="w-96 h-auto object-cover"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -325,6 +334,13 @@ const Portfolio = () => {
             aria-label="LinkedIn Profile"
           >
             <Linkedin size={32} />
+          </a>
+          <a 
+            href="mailto:mriganksingh005@gmail.com"
+            className="text-white hover:text-teal-300 transition-colors"
+            aria-label="Email Address"
+          >
+            <Mail size={32} />
           </a>
         </div>
       </section>
