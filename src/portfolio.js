@@ -6,28 +6,7 @@ const Portfolio = () => {
   const [isScrolling, setIsScrolling] = useState(false);
   const [darkMode, setDarkMode] = useState(true);
 
-  // Use a base URL constant
-  const BASE_URL = '/Portfolio_Website';
-
-  const techStack = [
-    { name: "C", icon: `${BASE_URL}/c.png`, alt: "C Logo", description: "General-purpose language for system programming." },
-    { name: "C++", icon: `${BASE_URL}/cpp.png`, alt: "C++ Logo", description: "Object-oriented extension of C for game and system development." },
-    { name: "C#", icon: `${BASE_URL}/csharp.png`, alt: "C# Logo", description: "Modern OOP language for Windows apps and Unity games." },
-    { name: "Python", icon: `${BASE_URL}/python.png`, alt: "Python Logo", description: "High-level language for web dev, data science, and more." },
-    { name: "HTML5", icon: `${BASE_URL}/html5.png`, alt: "HTML5 Logo", description: "Latest version of HTML for web content." },
-    { name: "CSS3", icon: `${BASE_URL}/css3.png`, alt: "CSS3 Logo", description: "Latest version of CSS for web styling." },
-    { name: "JavaScript", icon: `${BASE_URL}/javascript.png`, alt: "JavaScript Logo", description: "Scripting language for interactive web pages." },
-    { name: "Node.js", icon: `${BASE_URL}/nodejs.png`, alt: "Node.js Logo", description: "Runtime for server-side JavaScript applications." },
-    { name: "NumPy", icon: `${BASE_URL}/numpy.png`, alt: "NumPy Logo", description: "Python library for numerical computations." },
-    { name: "Pandas", icon: `${BASE_URL}/pandas.png`, alt: "Pandas Logo", description: "Python library for data manipulation and analysis." },
-    { name: "Matplotlib", icon: `${BASE_URL}/matplotlib.png`, alt: "Matplotlib Logo", description: "Python library for plotting and visualization." },
-    { name: "React", icon: `${BASE_URL}/react.png`, alt: "React Logo", description: "JavaScript library for building user interfaces." },
-    { name: "Unity", icon: `${BASE_URL}/unity.png`, alt: "Unity Logo", description: "3D development engine for games and simulations." },
-    { name: "Gemini API", icon: `${BASE_URL}/gemini.png`, alt: "Gemini API Logo", description: "Google AI's language processing API." },
-    { name: "GitHub", icon: `${BASE_URL}/github.png`, alt: "GitHub Logo", description: "Web-based hosting for version control." },
-    { name: "VS Code", icon: `${BASE_URL}/vscode.png`, alt: "VS Code Logo", description: "Source-code editor by Microsoft." }
-  ];
-
+  // Updated projectsData with real projects
   const projectsData = [
     {
       title: "UPESBuddy",
@@ -38,59 +17,16 @@ const Portfolio = () => {
     {
       title: "Bubble Hunt Game",
       description: "A fun and interactive bubble hunt game developed using Unity. The game involves popping bubbles to score points, with increasing difficulty levels.",
-      demoLink: "https://example.com/bubble-hunt",
+      demoLink: "#",
       sourceLink: null
     },
     {
       title: "Disaster Response Training Tool",
       description: "A simulation tool designed to train emergency responders in disaster scenarios. The tool provides realistic simulations and feedback to improve response times and decision-making.",
-      demoLink: "https://example.com/disaster-response",
+      demoLink: "https://disaster-response-traning-tool.vercel.app/",
       sourceLink: null
     }
   ];
-
-  // Add error handling for images
-  const handleImageError = (e) => {
-    console.warn(`Failed to load image: ${e.target.src}`);
-    e.target.src = `${BASE_URL}/placeholder.png`; // Fallback to placeholder
-    // Or alternatively, handle the error by adjusting the parent container's style
-    e.target.style.display = 'none';
-    e.target.parentElement.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
-  };
-
-  const TechStack = ({ stack, darkMode }) => {
-    return (
-      <div>
-        <h2 className={`text-4xl font-bold mb-8 tracking-tight ${darkMode ? 'text-white' : 'text-black'}`}>Tech Stack</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          {stack.map((tech) => (
-            <div
-              key={tech.name}
-              className="bg-white/10 p-4 rounded-lg backdrop-blur-sm hover:bg-white/20 transition-all duration-300 group relative"
-              role="listitem"
-              aria-label={`${tech.name} technology`}
-            >
-              <div className="bg-white/5 p-3 rounded-lg mb-3">
-                <img
-                  src={tech.icon}
-                  alt={tech.alt}
-                  className="w-16 h-16 mx-auto object-contain group-hover:scale-110 transition-transform duration-300"
-                  loading="lazy"
-                  onError={handleImageError}
-                />
-              </div>
-              <p className={`text-center text-sm font-medium ${darkMode ? 'text-gray-300' : 'text-black'} group-hover:text-white transition-colors whitespace-normal`}>
-                {tech.name}
-              </p>
-              <div className="absolute inset-0 bg-white/10 rounded-lg backdrop-blur-sm flex items-center justify-center p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <p className={`text-center text-sm ${darkMode ? 'text-white' : 'text-black'} whitespace-normal`}>{tech.description}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    );
-  };
 
   const ProjectCard = ({ title, description, demoLink, sourceLink }) => {
     return (
@@ -129,10 +65,11 @@ const Portfolio = () => {
     );
   };
 
+  // Rest of the component remains the same...
   useEffect(() => {
     const handleScroll = () => {
       if (!isScrolling) {
-        const sections = ['home', 'techstack', 'projects', 'contact'];
+        const sections = ['home', 'projects', 'contact'];
         const current = sections.find(section => {
           const element = document.getElementById(section);
           if (element) {
@@ -173,7 +110,7 @@ const Portfolio = () => {
             MS
           </div>
           <div className="flex flex-wrap justify-center gap-4 md:gap-8 tracking-wider">
-            {['Home', 'TechStack', 'Projects', 'Contact'].map((item) => (
+            {['Home', 'Projects', 'Contact'].map((item) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(item.toLowerCase())}
@@ -212,10 +149,6 @@ const Portfolio = () => {
             </p>
           </div>
         </div>
-      </section>
-
-      <section id="techstack" className="max-w-6xl mx-auto py-20 px-4">
-        <TechStack stack={techStack} darkMode={darkMode} />
       </section>
 
       <section id="projects" className="max-w-6xl mx-auto py-20 px-4">
