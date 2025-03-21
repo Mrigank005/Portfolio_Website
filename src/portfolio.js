@@ -8,12 +8,12 @@ const Portfolio = () => {
 
   // Updated projectsData with real projects
   const projectsData = [
-    {
-      title: "UPESBuddy",
-      description: "An intelligent AI chatbot developed as part of the AI/ML department at UPES. As a team member of this innovative project, I contribute to creating a comprehensive assistant for UPES students. The chatbot provides instant information about university facilities, campus navigation, faculty details, and more.",
-      demoLink: "https://t.me/UpesBot",
-      sourceLink: null
-    },
+    // {
+    //   title: "UPESBuddy",
+    //   description: "An intelligent AI chatbot developed as part of the AI/ML department at UPES. As a team member of this innovative project, I contribute to creating a comprehensive assistant for UPES students. The chatbot provides instant information about university facilities, campus navigation, faculty details, and more.",
+    //   demoLink: "https://t.me/UpesBot",
+    //   sourceLink: null
+    // },
     {
       title: "Bubble Hunt Game",
       description: "A fun and interactive bubble hunt game developed using Unity. The game involves popping bubbles to score points, with increasing difficulty levels.",
