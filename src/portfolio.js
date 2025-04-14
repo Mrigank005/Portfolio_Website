@@ -41,8 +41,8 @@ const Portfolio = () => {
 
   const ProjectCard = ({ title, description, demoLink, sourceLink }) => {
     return (
-      <div className="bg-teal-900/30 backdrop-blur-sm p-8 rounded-lg hover:bg-teal-800/40 transition-all group">
-        <h3 className="text-2xl font-bold mb-4 tracking-tight group-hover:text-teal-300 transition-colors">
+      <div className="bg-gray-800/30 backdrop-blur-sm p-8 rounded-lg hover:bg-gray-700/40 transition-all group">
+        <h3 className="text-2xl font-bold mb-4 tracking-tight group-hover:text-gray-300 transition-colors">
           {title}
         </h3>
         <p className="text-gray-300 mb-6 tracking-wide">
@@ -54,7 +54,7 @@ const Portfolio = () => {
               href={demoLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 bg-teal-600 px-6 py-2 rounded-lg hover:bg-teal-700 transition-colors tracking-wide"
+              className="flex items-center gap-2 bg-gray-600 px-6 py-2 rounded-lg hover:bg-gray-700 transition-colors tracking-wide"
             >
               <ExternalLink size={20} />
               <span>Try Demo</span>
@@ -65,7 +65,7 @@ const Portfolio = () => {
               href={sourceLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 border border-teal-600 px-6 py-2 rounded-lg hover:bg-teal-900/60 transition-colors tracking-wide"
+              className="flex items-center gap-2 border border-gray-600 px-6 py-2 rounded-lg hover:bg-gray-900/60 transition-colors tracking-wide"
             >
               <Github size={20} />
               <span>Source Code</span>
@@ -76,7 +76,6 @@ const Portfolio = () => {
     );
   };
 
-  // Rest of the component remains the same...
   useEffect(() => {
     const handleScroll = () => {
       if (!isScrolling) {
@@ -114,10 +113,10 @@ const Portfolio = () => {
   };
 
   return (
-    <div className={`min-h-screen ${darkMode ? 'bg-gradient-to-br from-teal-950 via-teal-900 to-teal-800' : 'bg-gradient-to-br from-teal-100 via-teal-200 to-teal-300'} ${darkMode ? 'text-white' : 'text-gray-900'} font-mono`}>
-      <nav className="p-4 bg-teal-950/30 backdrop-blur-sm fixed w-full z-50">
+    <div className={`min-h-screen ${darkMode ? 'bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700' : 'bg-gradient-to-br from-gray-100 via-gray-200 to-gray-300'} ${darkMode ? 'text-white' : 'text-gray-900'} font-mono`}>
+      <nav className="p-4 bg-gray-900/30 backdrop-blur-sm fixed w-full z-50">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
-          <div className="text-5xl font-black transform -skew-x-12 text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-emerald-300 mb-4 md:mb-0">
+          <div className="text-5xl font-black transform -skew-x-12 text-transparent bg-clip-text bg-gradient-to-r from-gray-400 to-gray-300 mb-4 md:mb-0">
             MS
           </div>
           <div className="flex flex-wrap justify-center gap-4 md:gap-8 tracking-wider">
@@ -125,18 +124,18 @@ const Portfolio = () => {
               <button
                 key={item}
                 onClick={() => scrollToSection(item.toLowerCase())}
-                className={`px-3 py-2 hover:text-teal-300 transition-colors font-mono relative ${activeSection === item.toLowerCase() ? 'text-teal-300' : ''}`}
+                className={`px-3 py-2 hover:text-gray-300 transition-colors font-mono relative ${activeSection === item.toLowerCase() ? 'text-gray-300' : ''}`}
                 aria-label={`Scroll to ${item}`}
               >
                 {item}
                 {activeSection === item.toLowerCase() && (
-                  <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-teal-300" />
+                  <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-gray-300" />
                 )}
               </button>
             ))}
             <button
               onClick={toggleDarkMode}
-              className="px-3 py-2 hover:text-teal-300 transition-colors"
+              className="px-3 py-2 hover:text-gray-300 transition-colors"
               aria-label="Toggle Dark Mode"
             >
               {darkMode ? <Sun size={24} /> : <Moon size={24} />}
@@ -149,7 +148,7 @@ const Portfolio = () => {
         <div className="flex flex-wrap items-center gap-12">
           <div className="w-full lg:w-1/2">
             <h1 className="text-4xl font-bold mb-4 tracking-tight">
-              Hello! I Am <span className="text-teal-400">Mrigank Singh</span>
+              Hello! I Am <span className="text-gray-300">Mrigank Singh</span>
             </h1>
             <p className="text-xl mb-6 tracking-wide">A CS Student who</p>
             <h2 className="text-5xl font-bold mb-4 tracking-tight">
@@ -181,7 +180,7 @@ const Portfolio = () => {
             href="https://github.com/Mrigank005"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white hover:text-teal-300 transition-colors"
+            className="text-white hover:text-gray-300 transition-colors"
             aria-label="GitHub Profile"
           >
             <Github size={32} />
@@ -190,14 +189,14 @@ const Portfolio = () => {
             href="https://www.linkedin.com/in/mrigank-singh-1899bb31b/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white hover:text-teal-300 transition-colors"
+            className="text-white hover:text-gray-300 transition-colors"
             aria-label="LinkedIn Profile"
           >
             <Linkedin size={32} />
           </a>
           <a
             href="mailto:mriganksingh005@gmail.com"
-            className="text-white hover:text-teal-300 transition-colors"
+            className="text-white hover:text-gray-300 transition-colors"
             aria-label="Email"
           >
             <Mail size={32} />
