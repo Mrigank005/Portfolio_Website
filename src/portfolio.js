@@ -27,7 +27,7 @@ const Portfolio = () => {
     },
     {
       title: "Optical Character Recognition",
-      description: "Optical Character Recognition (OCR) using Python and Tesseract. OCR technology enables the conversion of various types of documents, such as scanned paper documents, PDFs, or images captured by a digital camera, into editable and searchable data. By leveraging Python's simplicity and Tesseract's powerful OCR capabilities, this project aims to equip learners with both theoretical knowledge and practical skills in text extraction from images.",
+      description: "Optical Character Recognition (OCR) using Python and Tesseract. OCR technology enables the conversion of various types of documents, such as scanned paper documents, PDFs, or images captured by a digital camera, into editable and searchable data. By leveraging Python's simplicity and Tesseract's powerful OCR capabilities, this project aims extract text from images.",
       demoLink: "#",
       sourceLink: null
     },
