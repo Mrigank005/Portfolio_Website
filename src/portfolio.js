@@ -6,14 +6,13 @@ const Portfolio = () => {
   const [isScrolling, setIsScrolling] = useState(false);
   const [darkMode, setDarkMode] = useState(true);
 
-  // Updated projectsData with real projects
   const projectsData = [
-    // {
-    //   title: "UPESBuddy",
-    //   description: "An intelligent AI chatbot developed as part of the AI/ML department at UPES. As a team member of this innovative project, I contribute to creating a comprehensive assistant for UPES students. The chatbot provides instant information about university facilities, campus navigation, faculty details, and more.",
-    //   demoLink: "https://t.me/UpesBot",
-    //   sourceLink: null
-    // },
+    {
+      title: "UPESBuddy",
+      description: "An intelligent AI chatbot developed as part of a group project. As a team member of this innovative project, I contribute to creating a comprehensive assistant for UPES students. The chatbot provides instant information about university facilities, campus navigation, faculty details, and more.",
+      demoLink: "https://t.me/UpesBot",
+      sourceLink: null
+    },
     {
       title: "Bubble Hunt Game",
       description: "A fun and interactive bubble hunt game developed using Unity. The game involves popping bubbles to score points, with increasing difficulty levels.",
@@ -22,10 +21,22 @@ const Portfolio = () => {
     },
     {
       title: "Disaster Response Training Tool",
-      description: "A simulation tool designed to train emergency responders in disaster scenarios. The tool provides realistic simulations and feedback to improve response times and decision-making.",
+      description: "The Disaster Response Training Tool is an interactive web-based platform designed to enhance disaster preparedness and response training. It provides users with realistic simulations, decision-making scenarios, and educational resources to improve their ability to handle emergency situations effectively.",
       demoLink: "https://disaster-response-traning-tool.vercel.app/",
       sourceLink: null
-    }
+    },
+    {
+      title: "Optical Character Recognition",
+      description: "Optical Character Recognition (OCR) using Python and Tesseract. OCR technology enables the conversion of various types of documents, such as scanned paper documents, PDFs, or images captured by a digital camera, into editable and searchable data. By leveraging Python's simplicity and Tesseract's powerful OCR capabilities, this project aims to equip learners with both theoretical knowledge and practical skills in text extraction from images.",
+      demoLink: "#",
+      sourceLink: null
+    },
+    {
+      title: "Full-Stack AI Trip Planner",
+      description: "A smart, full-stack trip planner using cutting-edge technologies like React, Gemini AI, Firebase, and TailwindCSS. Whether you're planning a weekend getaway or a world tour, this app helps users generate customized itineraries, discover destinations, and organize trips — all with the help of AI.",
+      demoLink: "#",
+      sourceLink: null
+    },
   ];
 
   const ProjectCard = ({ title, description, demoLink, sourceLink }) => {
