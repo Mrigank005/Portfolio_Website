@@ -16,7 +16,7 @@ const ProjectsSection = () => {
     {
       title: "Disaster Response Training Tool",
       description: "An interactive web-based simulation platform for training in emergency scenarios.",
-      tags: ["React", "Three.js", "Firebase"],
+      tags: ["HTML", "CSS", "JavaScript", "Gemini API"],
       liveLink: "https://disaster-response-traning-tool.vercel.app/",
       githubLink: "https://disaster-response-traning-tool.vercel.app/",
       type: "Live Demo"

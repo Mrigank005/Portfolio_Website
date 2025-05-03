@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
-import { Mail, Phone, Linkedin, Github, Send } from "lucide-react";
+import { Mail, Github, Linkedin, Send } from "lucide-react";
 
 const ContactSection = () => {
   const { toast } = useToast();
@@ -14,26 +14,23 @@ const ContactSection = () => {
     { 
       icon: <Mail className="h-5 w-5" />, 
       title: "Email",
-      details: [
-        "mriganksingh2000@gmail.com",
-        "Mrigank.12123@stu.upes.ac.in"
-      ]
+      link: "mailto:mriganksingh005@gmail.com"
     },
     { 
-      icon: <Phone className="h-5 w-5" />, 
-      title: "Phone",
-      details: ["+91 8273437398"]
+      icon: <Github className="h-5 w-5" />, 
+      title: "GitHub",
+      link: "https://github.com/Mrigank005"
     },
     { 
       icon: <Linkedin className="h-5 w-5" />, 
       title: "LinkedIn",
-      details: ["linkedin.com/in/mrigank-singh-1899bb31b"]
+      link: "https://linkedin.com/in/mrigank-singh-1899bb31b"
     },
   ];
   
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real app, you would handle the form submission here
+    // In a real app, you would handle the form submission to send to mriganksingh005@gmail.com
     toast({
       title: "Message sent!",
       description: "Thank you for reaching out. I'll get back to you soon.",
@@ -61,9 +58,14 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-medium mb-2">{item.title}</h3>
-                    {item.details.map((detail, idx) => (
-                      <p key={idx} className="text-white/70">{detail}</p>
-                    ))}
+                    <a 
+                      href={item.link} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="text-white/70 hover:text-space-purple transition-colors"
+                    >
+                      Connect with me
+                    </a>
                   </div>
                 </CardContent>
               </Card>
@@ -72,7 +74,7 @@ const ContactSection = () => {
             {/* Social Links */}
             <div className="flex gap-4 mt-6">
               <a 
-                href="https://github.com" 
+                href="https://github.com/Mrigank005" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="p-3 rounded-full glassmorphism text-white/80 hover:text-space-purple hover:bg-white/10 transition-colors"
@@ -81,7 +83,7 @@ const ContactSection = () => {
                 <Github className="h-5 w-5" />
               </a>
               <a 
-                href="https://linkedin.com" 
+                href="https://linkedin.com/in/mrigank-singh-1899bb31b" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="p-3 rounded-full glassmorphism text-white/80 hover:text-space-purple hover:bg-white/10 transition-colors"
