@@ -70,29 +70,6 @@ const ContactSection = () => {
                 </CardContent>
               </Card>
             ))}
-            
-            {/* Social Links */}
-            <div className="flex gap-4 mt-6">
-              <a 
-                href="https://github.com/Mrigank005" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="p-3 rounded-full glassmorphism text-white/80 hover:text-space-purple hover:bg-white/10 transition-colors"
-                aria-label="GitHub"
-              >
-                <Github className="h-5 w-5" />
-              </a>
-              <a 
-                href="https://linkedin.com/in/mrigank-singh-1899bb31b" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="p-3 rounded-full glassmorphism text-white/80 hover:text-space-purple hover:bg-white/10 transition-colors"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="h-5 w-5" />
-              </a>
-            </div>
-          </div>
           
           {/* Contact Form */}
           <Card className="cosmic-card md:col-span-3">
