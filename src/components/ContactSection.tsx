@@ -8,7 +8,7 @@ import { Mail, Github, Linkedin, Send } from "lucide-react";
 
 const ContactSection = () => {
   const { toast } = useToast();
-  
+
   const contactInfo = [
     { 
       icon: <Mail className="h-5 w-5" />, 
@@ -26,26 +26,25 @@ const ContactSection = () => {
       link: "https://linkedin.com/in/mrigank-singh-1899bb31b"
     },
   ];
-  
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real app, you would handle the form submission to send to mriganksingh005@gmail.com
     toast({
       title: "Message sent!",
       description: "Thank you for reaching out. I'll get back to you soon.",
     });
   };
-  
+
   return (
     <section id="contact" className="py-20 relative">
       {/* Background element */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom,_var(--tw-gradient-stops))] from-space-purple/5 via-transparent to-transparent pointer-events-none"></div>
-      
+
       <div className="container mx-auto px-4 md:px-6">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
           Get In <span className="bg-gradient-to-r from-space-purple to-space-violet bg-clip-text text-transparent">Touch</span>
         </h2>
-        
+
         <div className="grid md:grid-cols-5 gap-8 items-start">
           {/* Contact Information */}
           <div className="md:col-span-2 space-y-6">
@@ -70,6 +69,7 @@ const ContactSection = () => {
               </Card>
             ))}
           </div>
+
           {/* Contact Form */}
           <Card className="cosmic-card md:col-span-3">
             <CardContent className="p-6">
@@ -126,7 +126,7 @@ const ContactSection = () => {
           </Card>
         </div>
       </div>
-      
+
       {/* Decorative elements */}
       <div className="absolute top-1/4 right-10 w-2 h-2 bg-space-star opacity-70 rounded-full animate-twinkle"></div>
       <div className="absolute bottom-1/3 left-20 w-3 h-3 bg-space-purple opacity-50 rounded-full animate-twinkle" style={{animationDelay: '-1s'}}></div>
