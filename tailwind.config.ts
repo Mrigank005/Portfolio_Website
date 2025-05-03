@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -18,12 +19,24 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'space': ['"Space Grotesk"', 'sans-serif'],
+				'sans': ['Inter', 'sans-serif']
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				space: {
+					'dark': '#0A192F',
+					'deeper': '#112240',
+					'purple': '#9b87f5',
+					'violet': '#6E59A5',
+					'star': '#FCEE0A',
+					'nebula': '#7E69AB'
+				},
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'
@@ -84,11 +97,47 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+				'twinkle': {
+					'0%, 100%': {
+						opacity: '1',
+					},
+					'50%': {
+						opacity: '0.2',
+					},
+				},
+				'float': {
+					'0%, 100%': {
+						transform: 'translateY(0)',
+					},
+					'50%': {
+						transform: 'translateY(-10px)',
+					},
+				},
+				'orbit': {
+					'0%': {
+						transform: 'rotate(0deg) translateX(10px) rotate(0deg)',
+					},
+					'100%': {
+						transform: 'rotate(360deg) translateX(10px) rotate(-360deg)',
+					},
+				},
+				'pulse-glow': {
+					'0%, 100%': {
+						boxShadow: '0 0 5px rgba(155, 135, 245, 0.5)',
+					},
+					'50%': {
+						boxShadow: '0 0 20px rgba(155, 135, 245, 1)',
+					},
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'twinkle': 'twinkle 3s ease-in-out infinite',
+				'float': 'float 6s ease-in-out infinite',
+				'orbit': 'orbit 15s linear infinite',
+				'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
 			}
 		}
 	},
