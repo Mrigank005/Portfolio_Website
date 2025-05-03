@@ -24,16 +24,17 @@ const ProjectsSection = () => {
     {
       title: "Optical Character Recognition (OCR)",
       description: "Python tool using Tesseract OCR to extract text from images and save them as .txt files.",
+      tags: ["Python", "Tesseract", "OCR"],
       githubLink: "https://github.com/Mrigank005/OCR",
-      type: "GitHub",
-      tags: ["Python", "Tesseract", "OCR"]
+      type: "GitHub"
     },
     {
       title: "Rubric Generator",
       description: "Machine learning model that generates grading rubrics from questions and sample answers.",
+      tags: ["Machine Learning", "Python", "NLP"],
+      liveLink: "https://huggingface.co/Mrigank005/Rubric_Generator",
       githubLink: "https://github.com/Mrigank005/Rubric_Generator",
-      type: "GitHub",
-      tags: ["Machine Learning", "Python", "NLP"]
+      type: "Live Demo"
     }
   ];
 
