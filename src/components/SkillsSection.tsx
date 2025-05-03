@@ -43,7 +43,7 @@ const SkillsSection = () => {
         </h2>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {skillCategories.map((category, index) => (
+          {skillCategories && skillCategories.map((category, index) => (
             <Card key={index} className="cosmic-card h-full">
               <CardContent className="p-6 space-y-4">
                 <div className="flex items-center gap-3">
@@ -54,7 +54,7 @@ const SkillsSection = () => {
                 </div>
                 
                 <div className="flex flex-wrap gap-2 mt-4">
-                  {category.skills.map((skill, idx) => (
+                  {category.skills && category.skills.map((skill, idx) => (
                     <span 
                       key={idx} 
                       className="px-3 py-1 text-sm rounded-full glassmorphism text-white/90 hover:bg-space-purple/20 transition-colors"

@@ -25,13 +25,15 @@ const ProjectsSection = () => {
       title: "Optical Character Recognition (OCR)",
       description: "Python tool using Tesseract OCR to extract text from images and save them as .txt files.",
       githubLink: "https://github.com/Mrigank005/OCR",
-      type: "GitHub"
+      type: "GitHub",
+      tags: ["Python", "Tesseract", "OCR"]
     },
     {
       title: "Rubric Generator",
       description: "Machine learning model that generates grading rubrics from questions and sample answers.",
       githubLink: "https://github.com/Mrigank005/Rubric_Generator",
-      type: "GitHub"
+      type: "GitHub",
+      tags: ["Machine Learning", "Python", "NLP"]
     }
   ];
 
@@ -43,7 +45,7 @@ const ProjectsSection = () => {
         </h2>
         
         <div className="grid md:grid-cols-2 gap-8">
-          {projects.map((project, index) => (
+          {projects && projects.map((project, index) => (
             <Card 
               key={index} 
               className="cosmic-card overflow-hidden group bg-gradient-to-br from-transparent to-space-deeper/50"
@@ -56,7 +58,7 @@ const ProjectsSection = () => {
                 <p className="text-white/70">{project.description}</p>
                 
                 <div className="flex flex-wrap gap-2 pt-2">
-                  {project.tags.map((tag, idx) => (
+                  {project.tags && project.tags.map((tag, idx) => (
                     <span key={idx} className="px-2 py-1 text-xs rounded-full bg-space-deeper/80 text-white/60">
                       {tag}
                     </span>
