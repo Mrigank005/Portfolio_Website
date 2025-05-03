@@ -52,7 +52,7 @@ const Navigation = () => {
             </a>
           ))}
           <a 
-            href="/resume.pdf" 
+            href="https://drive.google.com/file/d/1HrV9PI5mA8kXHC-U5_4hdS7J71Cy7Q7j/view?usp=sharing" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="cosmic-secondary-button"
@@ -90,7 +90,7 @@ const Navigation = () => {
             </a>
           ))}
           <a 
-            href="/resume.pdf" 
+            href="https://drive.google.com/file/d/1HrV9PI5mA8kXHC-U5_4hdS7J71Cy7Q7j/view?usp=sharing" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="cosmic-secondary-button self-start my-2"

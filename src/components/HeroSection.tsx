@@ -37,7 +37,12 @@ const HeroSection = () => {
               <RocketIcon size={18} />
               View Projects
             </a>
-            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="cosmic-secondary-button">
+            <a 
+              href="https://drive.google.com/file/d/1HrV9PI5mA8kXHC-U5_4hdS7J71Cy7Q7j/view?usp=sharing" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="cosmic-secondary-button"
+            >
               <Download size={18} />
               Download Resume
             </a>

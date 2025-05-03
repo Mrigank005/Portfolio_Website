@@ -67,31 +67,6 @@ const SkillsSection = () => {
             </Card>
           ))}
         </div>
-        
-        {/* Skill level visualization */}
-        <div className="mt-16 max-w-3xl mx-auto space-y-6">
-          <h3 className="text-2xl font-medium text-center mb-8">Technical Proficiency</h3>
-          
-          {[
-            { name: "Frontend Development", level: 80 },
-            { name: "Python Programming", level: 85 },
-            { name: "Backend Development", level: 60 },
-            { name: "UI/UX Design", level: 70 },
-          ].map((skill, index) => (
-            <div key={index} className="space-y-2">
-              <div className="flex justify-between text-sm">
-                <span>{skill.name}</span>
-                <span>{skill.level}%</span>
-              </div>
-              <div className="h-2 w-full bg-space-deeper rounded-full overflow-hidden">
-                <div 
-                  className="h-full bg-gradient-to-r from-space-purple to-space-violet animate-pulse-glow"
-                  style={{ width: `${skill.level}%` }}
-                />
-              </div>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   );

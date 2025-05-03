@@ -9,30 +9,28 @@ const ProjectsSection = () => {
       title: "Bubble Labyrinth",
       description: "A puzzle-platformer built at Global Game Jam 2025 (UPES Dehradun). Navigate a maze using bubble mechanics.",
       tags: ["Unity", "C#", "Game Development"],
-      liveLink: "#",
-      githubLink: "#",
+      liveLink: "https://globalgamejam.org/games/2025/bubble-labyrinth-9",
+      githubLink: "https://globalgamejam.org/games/2025/bubble-labyrinth-9",
       type: "Game Link"
     },
     {
       title: "Disaster Response Training Tool",
       description: "An interactive web-based simulation platform for training in emergency scenarios.",
       tags: ["React", "Three.js", "Firebase"],
-      liveLink: "#",
-      githubLink: "#",
+      liveLink: "https://disaster-response-traning-tool.vercel.app/",
+      githubLink: "https://disaster-response-traning-tool.vercel.app/",
       type: "Live Demo"
     },
     {
       title: "Optical Character Recognition (OCR)",
       description: "Python tool using Tesseract OCR to extract text from images and save them as .txt files.",
-      tags: ["Python", "OpenCV", "Tesseract"],
-      githubLink: "#",
+      githubLink: "https://github.com/Mrigank005/OCR",
       type: "GitHub"
     },
     {
       title: "Rubric Generator",
       description: "Machine learning model that generates grading rubrics from questions and sample answers.",
-      tags: ["Python", "TensorFlow", "NLP"],
-      githubLink: "#",
+      githubLink: "https://github.com/Mrigank005/Rubric_Generator",
       type: "GitHub"
     }
   ];
