@@ -34,7 +34,7 @@ const ProjectsSection = () => {
       tags: ["Machine Learning", "Python", "NLP"],
       liveLink: "https://huggingface.co/Mrigank005/Rubric_Generator",
       githubLink: "https://github.com/Mrigank005/Rubric_Generator",
-      type: "Live Demo"
+      type: "Hugging Face"
     }
   ];
 
