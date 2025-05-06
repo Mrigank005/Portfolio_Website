@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Rocket, Orbit, Satellite, Telescope, Moon, Star } from "lucide-react";
@@ -8,7 +7,7 @@ const SkillsSection = () => {
     {
       title: "Languages",
       icon: <Rocket className="h-6 w-6" />,
-      skills: ["C", "Python", "Shell Scripting", "HTML", "CSS", "JavaScript", "React"],
+      skills: ["C", "Python", "Shell Scripting", "HTML", "CSS", "JavaScript", "React", "Tailwind"],
     },
     {
       title: "Tools",
@@ -18,12 +17,12 @@ const SkillsSection = () => {
     {
       title: "Operating Systems",
       icon: <Moon className="h-6 w-6" />,
-      skills: ["Windows", "macOS", "Ubuntu"],
+      skills: ["Windows", "macOS", "Ubuntu", "Android"],
     },
     {
       title: "Soft Skills",
       icon: <Satellite className="h-6 w-6" />,
-      skills: ["Communication", "Time Management", "Attention to Detail"],
+      skills: ["Communication", "Teamwork", "Adaptability", "Time Management", "Attention to Detail"],
     },
   ];
 
